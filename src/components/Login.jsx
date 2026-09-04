@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { BASE_URL } from '../utils/constants';
 import { useSelector } from 'react-redux';
 const Login = () => {
-  const user = useSelector((state) => state.user);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
