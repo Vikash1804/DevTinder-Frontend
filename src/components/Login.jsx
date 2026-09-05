@@ -7,7 +7,9 @@ import { addUser } from '../utils/userSlice';
 import { BASE_URL } from '../utils/constants';
 import { useSelector } from 'react-redux';
 const Login = () => {
+  
 
+const [error , seterror] = useState(" ");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
@@ -26,6 +28,7 @@ const Login = () => {
      
 
       catch(err){
+        seterror(err?.response?.message || "Invalid Credentials")
         console.log(err)  
      }
   }
@@ -52,6 +55,7 @@ const Login = () => {
       className="input input-bordered" value={password} 
       onChange={(e) => setPassword(e.target.value)} />
     </div>
+    <p className='text-red-600'>{error}</p>
     <div className="card-actions justify-center py-2">
       <button className="btn btn-primary "
       onClick = {handleLogin}>
