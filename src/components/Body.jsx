@@ -17,7 +17,7 @@ const Body = () => {
     const res = await axios.get(BASE_URL + "/profile/view",{
        withCredentials: true,
     });
-    console.log(res);
+  
     dispatch(addUser(res.data));
   }
   catch(err){
@@ -28,7 +28,7 @@ const Body = () => {
   }
   }
 
-  useEffect(()=>{
+ const call =  useEffect(()=>{
     if(!userdata){
     fetchUser();
     }
