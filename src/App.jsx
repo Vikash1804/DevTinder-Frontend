@@ -7,6 +7,7 @@ import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import Connections from "./components/Connections";
 import Requests from "./components/Requests";
+import SignUp from "./components/SignUp";
 function App() {
  
 
@@ -21,7 +22,8 @@ function App() {
     <Route path="/login" element={<Login />} />
     <Route path="/profile" element={<Profile />} />
     <Route path="/connections" element={<Connections />} />
-     r<Route path="/requests" element={<Requests />} />
+     <Route path="/requests" element={<Requests />} />
+      <Route path="/signup" element={<SignUp/>} />
     
 
 
